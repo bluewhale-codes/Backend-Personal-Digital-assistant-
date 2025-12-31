@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const cors = require("cors");
-
+const vectorStore = require("./rag/vectorStore");
 const loadOwnerData = require("./rag/loader");
 const chunkDocuments = require("./rag/embed");
 const { initEmbedder, buildVectorStore, search, loadFromDisk, getStats } = require("./rag/vectorStore");
@@ -760,34 +760,21 @@ function parseToolCall(response) {
   console.log("❌ No valid tool call detected");
   return null;
 }
-// 🚀 Initialize RAG
-(async () => {
-  try {
-    console.log("🔄 Initializing RAG system...");
-    
-    await initEmbedder();
-    console.log("✅ Embedder initialized");
-    
-    const loaded = loadFromDisk();
-    
-    if (!loaded) {
-      console.log("📂 Building vector store from scratch...");
-      const docs = loadOwnerData();
-      const chunks = chunkDocuments(docs);
-      await buildVectorStore(chunks);
-      console.log("✅ Vector store built successfully");
-    } else {
-      console.log("✅ Using existing vector store");
-    }
-    
-    const stats = getStats();
-    console.log("📊 RAG Stats:", stats);
-    console.log("✅ RAG Vector Store Initialized");
-  } catch (error) {
-    console.error("❌ Failed to initialize RAG:", error);
-    console.log("⚠️ Continuing without RAG - some features may be limited");
+async function init() {
+  await vectorStore.initEmbedder();
+
+  const docs = loadOwnerData();
+  const chunks = chunkDocuments(docs);
+
+  if (chunks.length === 0) {
+    console.error("❌ No chunks created. Aborting.");
+    return;
   }
-})();
+
+  await vectorStore.buildVectorStore(chunks);
+}
+
+init();
 
 // ========== MAIN ASK ENDPOINT ==========
 app.post("/ask", async (req, res) => {

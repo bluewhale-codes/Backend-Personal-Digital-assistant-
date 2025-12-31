@@ -1,12 +1,99 @@
 {
-    "name": "Vishal Shakya",
-    "education": ["BSc Science", "MCA"],
-    "skills": ["Node.js", "React", "AI", "Full Stack"],
-    "projects": [
-        "Blockchain eCommerce Platform",
-        "Online Examination System"
-    ],
-    "goals": "Become a Computer Science Professor",
-    "parents": "vinod kumar shaky,babli devi"
+  "profileSummary": "My name is Vishal Shakya. I am passionate about technology, software development, and artificial intelligence. I enjoy learning new things and building meaningful projects.",
 
+  "personal": {
+    "name": "Vishal Shakya",
+    "parents": {
+      "father": "Vinod Kumar Shakya",
+      "mother": "Babli Devi",
+      "description": "I come from a supportive family. My father is Vinod Kumar Shakya and my mother is Babli Devi."
+    }
+  },
+
+  "education": [
+    {
+      "degree": "Bachelor of Science (BSc)",
+      "field": "Science",
+      "status": "Completed",
+      "description": "I completed my Bachelor of Science degree, which helped me build a strong foundation in analytical and scientific thinking."
+    },
+    {
+      "degree": "Master of Computer Applications (MCA)",
+      "field": "Computer Science",
+      "status": "Completed",
+      "description": "I completed my MCA in Computer Science, where I developed strong skills in software development and problem solving."
+    }
+  ],
+
+  "skills": {
+    "programming": {
+      "list": ["JavaScript", "Node.js", "React"],
+      "description": "I enjoy programming and mainly work with JavaScript, Node.js, and React."
+    },
+    "web": {
+      "list": ["HTML", "CSS"],
+      "description": "I use HTML and CSS to build clean and responsive user interfaces."
+    },
+    "ai": {
+      "list": ["Artificial Intelligence", "RAG", "LLMs"],
+      "description": "I am deeply interested in AI, especially working with LLMs and building RAG-based systems."
+    },
+    "fullStack": {
+      "list": ["Frontend", "Backend"],
+      "description": "I work as a full-stack developer, handling both frontend and backend development."
+    }
+  },
+
+  "projects": [
+    {
+      "name": "Blockchain eCommerce Platform",
+      "description": "I built a blockchain-integrated eCommerce platform focused on secure and transparent transactions. This project strengthened my understanding of decentralized systems."
+    },
+    {
+      "name": "Online Examination System",
+      "description": "I developed an online examination system with features like timers, auto-evaluation, and result generation."
+    }
+  ],
+
+  "goals": {
+    "career": "Become a Computer Science Professor",
+    "shortTerm": "Get a job as a software engineer",
+    "longTerm": "Teach and conduct research in Computer Science",
+    "description": "My long-term dream is to become a Computer Science professor and contribute to education and research."
+  },
+
+  "habits": {
+    "daily": {
+      "list": [
+        "Coding practice",
+        "Learning new technologies",
+        "Problem solving"
+      ],
+      "description": "I try to code daily and continuously improve my technical skills."
+    },
+    "health": {
+      "list": [
+        "Running daily",
+        "Playing football"
+      ],
+      "description": "I stay physically active by running daily and playing football."
+    },
+    "personalDevelopment": {
+      "list": [
+        "Reading technical articles",
+        "Building personal projects"
+      ],
+      "description": "I focus on self-growth by reading and working on personal projects."
+    }
+  },
+
+  "hobbies": {
+    "list": [
+      "Coding",
+      "Playing football",
+      "Learning AI",
+      "Cooking"
+    ],
+    "description": "In my free time, I enjoy coding, playing football, learning about AI, and cooking."
+  }
 }
