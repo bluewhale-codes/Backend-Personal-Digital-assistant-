@@ -12,10 +12,11 @@ app.use(express.json());
 // Middlewares
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
+    origin: ["http://localhost:5173","https://new-bees-ecommerce.vercel.app"], // frontend URL
     credentials: true                // allow cookies
   })
 );
+
 
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
@@ -162,6 +163,8 @@ app.get("/rag/stats", (req, res) => {
 
 /* ---------------- SERVER ---------------- */
 
-app.listen(3000, () => {
-  console.log("🚀 Server running at http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
