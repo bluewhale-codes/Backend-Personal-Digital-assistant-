@@ -1,0 +1,12 @@
+{
+    "name": "Vishal Shakya",
+    "education": ["BSc Science", "MCA"],
+    "skills": ["Node.js", "React", "AI", "Full Stack"],
+    "projects": [
+        "Blockchain eCommerce Platform",
+        "Online Examination System"
+    ],
+    "goals": "Become a Computer Science Professor",
+    "parents": "vinod kumar shaky,babli devi"
+
+}
